@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     {
         if (counting)
             elapsedTime += Time.deltaTime;
+        else return;
 
         if(bonfire.CurrentPower <= 0)
         {

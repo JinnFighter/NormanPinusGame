@@ -9,7 +9,7 @@ public class Stick : MonoBehaviour
     [SerializeField] private int stickType;// тип палки
     public int StickType { get => stickType; set => stickType = value; }
 
-public Stick(float Power, int StickType)
+    public Stick(float Power, int StickType)
     {
         power = Power;
         stickType = StickType;
@@ -24,4 +24,5 @@ public Stick(float Power, int StickType)
     {
         
     }
+
 }

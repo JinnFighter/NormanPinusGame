@@ -18,13 +18,15 @@ public class Bonfire : MonoBehaviour
 
     void Update()
     {
-        currentPower -= burningSpeed;
+        if(state != (int)BonfireStates.EXTINGUISHED)
+            currentPower -= burningSpeed;
+
         if (currentPower <= 0f) //если костер потух - перевести его состояние в "потушен"
             state = (int)BonfireStates.EXTINGUISHED;
     }
 
-    void AddPower(Stick stick)
+    public void AddPower(float power)
     {
-        currentPower += stick.Power;
+        currentPower += power;
     }
 }
