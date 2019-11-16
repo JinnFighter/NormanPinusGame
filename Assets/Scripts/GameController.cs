@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Bonfire bonfire; //костер
     [SerializeField] private Player player; //игрок
     private float elapsedTime { get; set; }
-    private List <Stick> sticks;
+    private List<Stick> sticks;
     private List<NPC> npcs;
     private bool counting;
 
@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if(counting)
+        if (counting)
             elapsedTime += Time.deltaTime;
     }
 
