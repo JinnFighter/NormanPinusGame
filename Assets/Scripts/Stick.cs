@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Stick : MonoBehaviour
 {
-    private float power;   // сила горения, которая добавится к костру;
-    private int stickType { get; set; } // тип палки
+    [SerializeField] private float power;   // сила горения, которая добавится к костру;
+    [SerializeField] private int stickType;// тип палки
+    public int StickType { get => stickType; set => stickType = value; }
 
-    public Stick(float Power, int StickType)
+public Stick(float Power, int StickType)
     {
         power = Power;
         stickType = StickType;

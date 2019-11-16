@@ -5,13 +5,14 @@ using UnityEngine;
 public class Bonfire : MonoBehaviour
 {
     private float currentPower;
+    public float CurrentPower { get => currentPower; set => currentPower = value; }
     private int state { get; set; } //состояние костра: Потушен, слабо горит, нормально, сильно, слишком сильно (нужно решить, сколько нужно)
     private float burningSpeed;     //скорость горения
 
     void Start()
     {
-        currentPower = 50f;
-        state = 1; //временные числа
+        currentPower = 500f;
+        state = (int)BonfireStates.NORMAL; //временные числа
         burningSpeed = 1.5f;
     }
 
@@ -19,6 +20,6 @@ public class Bonfire : MonoBehaviour
     {
         currentPower -= burningSpeed;
         if (currentPower <= 0f) //если костер потух - перевести его состояние в "потушен"
-            state = 0;
+            state = (int)BonfireStates.EXTINGUISHED;
     }
 }

@@ -4,17 +4,47 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float sticks{ get; set; } //кол-во палок
+    private Dictionary<int, int> sticks;
+    public Dictionary<int, int> Sticks { get; set; }
 
+    
+    void Awake()
+    {
+        sticks = new Dictionary<int, int>();
+    }
     void Start()
     {
-        sticks = 0; //временное число
+        sticks[(int)StickTypes.LITTLE] = 0;
     }
 
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            Vector3 pos = transform.position;
+            pos.y += 1;
+            transform.position = new Vector3(pos.x, pos.y,pos.z);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Vector3 pos = transform.position;
+            pos.y -= 1;
+            transform.position = new Vector3(pos.x, pos.y, pos.z);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Vector3 pos = transform.position;
+            pos.x -= 1;
+            transform.position = new Vector3(pos.x, pos.y, pos.z);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Vector3 pos = transform.position;
+            pos.x += 1;
+            transform.position = new Vector3(pos.x, pos.y, pos.z);
+        }
     }
+
 
     void Talk(NPC npc)
     {
@@ -32,5 +62,10 @@ public class Player : MonoBehaviour
                 npc.HappinessState -= 10;
                 break;
         }
+    }
+
+    void PickUpStick(Stick stick)
+    {
+        sticks[(int)stick.StickType] += 1;
     }
 }
