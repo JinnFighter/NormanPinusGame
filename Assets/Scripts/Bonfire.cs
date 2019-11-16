@@ -22,4 +22,9 @@ public class Bonfire : MonoBehaviour
         if (currentPower <= 0f) //если костер потух - перевести его состояние в "потушен"
             state = (int)BonfireStates.EXTINGUISHED;
     }
+
+    void AddPower(Stick stick)
+    {
+        currentPower += stick.Power;
+    }
 }
