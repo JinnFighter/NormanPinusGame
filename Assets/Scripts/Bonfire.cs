@@ -6,7 +6,8 @@ public class Bonfire : MonoBehaviour
 {
     private float currentPower;
     public float CurrentPower { get => currentPower; set => currentPower = value; }
-    private int state { get; set; } //состояние костра: Потушен, слабо горит, нормально, сильно, слишком сильно (нужно решить, сколько нужно)
+    private int state; //состояние костра: Потушен, слабо горит, нормально, сильно, слишком сильно (нужно решить, сколько нужно)
+    public int State { get => state; set => state = value; }
     private float burningSpeed;     //скорость горения
     private List<Stick> sticksPile;
 
