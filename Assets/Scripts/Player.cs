@@ -46,18 +46,13 @@ public class Player : MonoBehaviour
 
 
     void Talk(NPC npc)
-    {    
+    { 
+        int button_answer = 1; //Заменить button_answer на параметр передаваемый из юнити
         
-        int button_answer = 1 //Заменить button_answer на параметр передаваемый из юнити
+        int answer = button_answer; //Заменить button_answer на параметр передаваемый из юнити
+        int change_state = Random.Range(5, 15);
+        int change_secondary_state = Random.Range(1, change_state);
         
-        Dictionary<int, object> answers = new Dictionary<int, object>();
-        answers.Add(0, PeopleStates.HOSTILE);
-        answers.Add(1, PeopleStates.JOY); 
-        answers.Add(2, PeopleStates.HAPPY);
-        
-        int answer = answers(button_answer); //Заменить button_answer на параметр передаваемый из юнити
-        change_state = Random.Range(5, 15);
-        change_secondary_state = Random.Range(1, change_state)
         switch(answer)
         {
             case (0):

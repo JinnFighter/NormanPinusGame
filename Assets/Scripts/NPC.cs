@@ -17,7 +17,7 @@ public class NPC : MonoBehaviour
         age = Random.Range(18, 70);
         hostileState = Random.Range(10, 50);
         joyState = Random.Range(0, 100-hostileState);
-        happinessState = 100-(hostileState + joyState));
+        happinessState = 100-(hostileState + joyState);
     }
 
     void Update()
