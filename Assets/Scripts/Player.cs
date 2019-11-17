@@ -60,21 +60,21 @@ public class Player : MonoBehaviour
         change_secondary_state = Random.Range(1, change_state)
         switch(answer)
         {
-            case (0):
+            case (int)PeopleStates.HOSTILE:
                 npc.HostileState -= change_state;
                 
                 npc.JoyState += change_secondary_state;
                 npc.HappinessState += change_state - change_secondary_state;
                 break;
             
-            case (1):
+            case (int)PeopleStates.JOY:
                 npc.JoyState -= change_state;
                 
                 npc.HostileState += change_secondary_state;
                 npc.HappinessState += change_state - change_secondary_state;
                 break;
             
-            case (3):
+            case (int)PeopleStates.HAPPY:
                 npc.HappinessState -= change_state;
                 
                 npc.HostileState += change_secondary_state;
