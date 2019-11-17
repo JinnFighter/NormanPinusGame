@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour
     private bool counting;
     private GameplayTimer bonfireChecker;
     private GameplayTimer weatherChecker;
-    private int currentWeather;
 
     void Awake()
     {
@@ -36,7 +35,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         elapsedTime = 0f;
-        currentWeather = (int)WeatherStates.CLEAR;
+        bonfire.WeatherState = (int)WeatherStates.CLEAR;
         counting = true;
         bonfireChecker.StartTimer();
         weatherChecker.StartTimer();
@@ -64,19 +63,19 @@ public class GameController : MonoBehaviour
             float prob = UnityEngine.Random.Range(1, 10);
             if (prob <= weatherChangeRate[(int)WeatherStates.CLEAR])
             {
-                currentWeather = (int)WeatherStates.CLEAR;
+                bonfire.WeatherState = (int)WeatherStates.CLEAR;
                 weatherChecker.ResetTimer(47f);
             }
             else
             {
                 if(prob <= weatherChangeRate[(int)WeatherStates.RAIN])
                 {
-                    currentWeather = (int)WeatherStates.RAIN;
+                    bonfire.WeatherState = (int)WeatherStates.RAIN;
                     weatherChecker.ResetTimer(94f);
                 }
                 else
                 {
-                    currentWeather = (int)WeatherStates.WIND;
+                    bonfire.WeatherState = (int)WeatherStates.WIND;
                     weatherChecker.ResetTimer(141f);
                 }
             }

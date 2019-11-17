@@ -9,6 +9,7 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip femaleDeathSound;
     [SerializeField] private AudioClip positiveAnswerSound;
     [SerializeField] private AudioClip negativeAnswerSound;
+    [SerializeField] private AudioClip startDialogueSound;
     [SerializeField] private AudioClip bonfireSound;
 
     private AudioSource audioSource;
