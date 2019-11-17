@@ -61,24 +61,24 @@ public class Player : MonoBehaviour
         switch(answer)
         {
             case (0):
-                npc.HostileState += change_state;
+                npc.HostileState -= change_state;
                 
-                npc.JoyState -= change_secondary_state;
-                npc.HappinessState -= change_state - change_secondary_state;
+                npc.JoyState += change_secondary_state;
+                npc.HappinessState += change_state - change_secondary_state;
                 break;
             
             case (1):
-                npc.JoyState += change_state;
+                npc.JoyState -= change_state;
                 
-                npc.HostileState -= change_secondary_state;
-                npc.HappinessState -= change_state - change_secondary_state;
+                npc.HostileState += change_secondary_state;
+                npc.HappinessState += change_state - change_secondary_state;
                 break;
             
             case (3):
-                npc.HappinessState += change_state;
+                npc.HappinessState -= change_state;
                 
-                npc.HostileState -= change_secondary_state;
-                npc.HappinessState -= change_state - change_secondary_state;
+                npc.HostileState += change_secondary_state;
+                npc.HappinessState += change_state - change_secondary_state;
                 break;
         }
     }
