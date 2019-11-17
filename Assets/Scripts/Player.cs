@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private List<Stick> sticks;
-    public List<Stick> Sticks { get; set; }
+    private Stack<Stick> sticks;
+    public Stack<Stick> Sticks { get; set; }
     
     void Awake()
     {
-        sticks = new List<Stick>();
+        sticks = new Stack<Stick>();
     }
     void Start()
     {
@@ -66,9 +66,13 @@ public class Player : MonoBehaviour
     void PickUpStick(Stick stick)
     {
         Stick pickedUp = new Stick(stick);
-        sticks.Add(pickedUp);
+        sticks.Push(pickedUp);
     }
 
+    public void AddStickToFire(Stick stick)
+    {
+        sticks.Pop();
+    }
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log("GameObject1 collided with " + col.name);
@@ -96,8 +100,7 @@ public class Player : MonoBehaviour
             Debug.Log("Player has: " + sticks.Count + " little sticks");
             if(sticks.Count > 0)
             {
-                bonfire.AddPower(10f);
-                sticks.RemoveAt(0);
+                bonfire.AddPower(sticks.Pop().Power);
                 Debug.Log("Bonfire has " + bonfire.CurrentPower + " now");
                 Debug.Log("Player now has: " + sticks.Count + " little sticks");
             }

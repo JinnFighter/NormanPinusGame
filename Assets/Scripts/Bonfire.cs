@@ -14,6 +14,8 @@ public class Bonfire : MonoBehaviour
     private List<Stick> sticksPile;
     private Dictionary<int, float> burningSpeeds;
     private Dictionary<int, float> weatherModifiers;
+    private float maxPower = 1000f;
+
 
     void Awake()
     {
@@ -24,8 +26,8 @@ public class Bonfire : MonoBehaviour
                                                     { (int)BonfireStates.STRONG, 2.5f },
                                                     { (int)BonfireStates.UNCONTROLLABLE, 5f } };
         weatherModifiers = new Dictionary<int, float> { { (int)WeatherStates.CLEAR, 0f },
-                                                        { (int)WeatherStates.RAIN, -1.5f },
-                                                        { (int)WeatherStates.WIND, -3f }};
+                                                        { (int)WeatherStates.RAIN, 1.5f },
+                                                        { (int)WeatherStates.WIND, 3f }};
     }
     void Start()
     {
@@ -59,6 +61,10 @@ public class Bonfire : MonoBehaviour
     public void AddPower(float power)
     {
         currentPower += power;
+        if(currentPower > maxPower)
+        {
+            currentPower = maxPower;
+        }
     }
     public void AddToPile(Stick stick)
     {
