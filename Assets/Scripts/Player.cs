@@ -46,19 +46,39 @@ public class Player : MonoBehaviour
 
 
     void Talk(NPC npc)
-    {
-        int answer = (int)PeopleStates.HOSTILE; //выбор ответа должен быть здесь;
+    {    
+        
+        int button_answer = 1 //Заменить button_answer на параметр передаваемый из юнити
+        
+        Dictionary<int, object> answers = new Dictionary<int, object>();
+        answers.Add(0, PeopleStates.HOSTILE);
+        answers.Add(1, PeopleStates.JOY); 
+        answers.Add(2, PeopleStates.HAPPY);
+        
+        int answer = answers(button_answer); //Заменить button_answer на параметр передаваемый из юнити
+        change_state = Random.Range(5, 15);
+        change_secondary_state = Random.Range(1, change_state)
         switch(answer)
         {
             case (int)PeopleStates.HOSTILE:
-                npc.HostileState += 10;
-                npc.JoyState -= 5;
-                npc.HappinessState -= 5;
+                npc.HostileState -= change_state;
+                
+                npc.JoyState += change_secondary_state;
+                npc.HappinessState += change_state - change_secondary_state;
                 break;
+            
             case (int)PeopleStates.JOY:
-                npc.JoyState += 20;
-                npc.HostileState -= 10;
-                npc.HappinessState -= 10;
+                npc.JoyState -= change_state;
+                
+                npc.HostileState += change_secondary_state;
+                npc.HappinessState += change_state - change_secondary_state;
+                break;
+            
+            case (int)PeopleStates.HAPPY:
+                npc.HappinessState -= change_state;
+                
+                npc.HostileState += change_secondary_state;
+                npc.HappinessState += change_state - change_secondary_state;
                 break;
         }
     }
