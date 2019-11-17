@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a2e39f-8e25-42ec-b9d7-a8c406195950" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
-    </list>
+    <list default="true" id="51a2e39f-8e25-42ec-b9d7-a8c406195950" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,59 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Bonfire.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <marker date="1573990507209" expanded="false" signature="6:78" ph="..." />
-                <marker date="1573990507209" expanded="true" signature="116:2808" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="753:1532" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="851:1252" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="1308:1525" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="1549:1729" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="1748:2459" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="2006:2444" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="2498:2541" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="2580:2673" ph="{...}" />
-                <marker date="1573990507209" expanded="true" signature="2707:2806" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Player.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-              <folding>
-                <marker date="1573998092033" expanded="false" signature="6:78" ph="..." />
-                <marker date="1573998092033" expanded="true" signature="115:4243" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="215:263" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="280:301" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="320:1122" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="366:522" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="563:720" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="761:918" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="959:1116" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="1147:2506" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="1713:2500" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="2541:2626" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="2669:4241" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="2813:3083" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="3138:3556" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="3615:4235" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="3863:4122" ph="{...}" />
-                <marker date="1573998092033" expanded="true" signature="4139:4225" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -147,12 +93,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573991070470</updated>
-      <workItem from="1573991077279" duration="5502000" />
+      <workItem from="1573991077279" duration="6106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5502000" />
+    <option name="totallyTimeSpent" value="6106000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -165,7 +111,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2494331" />
@@ -226,26 +171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bonfire.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <marker date="1573990507209" expanded="false" signature="6:78" ph="..." />
-            <marker date="1573990507209" expanded="true" signature="116:2808" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="753:1532" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="851:1252" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="1308:1525" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="1549:1729" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="1748:2459" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="2006:2444" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="2498:2541" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="2580:2673" ph="{...}" />
-            <marker date="1573990507209" expanded="true" signature="2707:2806" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PeopleStates.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -258,7 +183,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="153">
           <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
           <folding>
             <marker date="1573998092033" expanded="false" signature="6:78" ph="..." />
@@ -279,6 +204,26 @@
             <marker date="1573998092033" expanded="true" signature="3615:4235" ph="{...}" />
             <marker date="1573998092033" expanded="true" signature="3863:4122" ph="{...}" />
             <marker date="1573998092033" expanded="true" signature="4139:4225" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bonfire.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <marker date="1573990507209" expanded="false" signature="6:78" ph="..." />
+            <marker date="1573990507209" expanded="true" signature="116:2808" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="753:1532" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="851:1252" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="1308:1525" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="1549:1729" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="1748:2459" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="2006:2444" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="2498:2541" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="2580:2673" ph="{...}" />
+            <marker date="1573990507209" expanded="true" signature="2707:2806" ph="{...}" />
           </folding>
         </state>
       </provider>
