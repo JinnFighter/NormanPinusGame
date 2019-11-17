@@ -48,4 +48,8 @@ public class GameplayTimer : MonoBehaviour
         startTime = value;
         currentTime = startTime;
     }
+    public void ResumeTimer()
+    {
+        counting = true;
+    }
 }

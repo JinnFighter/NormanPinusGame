@@ -16,9 +16,11 @@ public class GameController : MonoBehaviour
     private bool counting;
     private GameplayTimer bonfireChecker;
     private GameplayTimer weatherChecker;
+    private bool isPlaying;
 
     void Awake()
     {
+        isPlaying = false;
         sticks = new List<Stick>();
         npcs = new List<NPC>();
         bonfireChecker = new GameplayTimer(30f);
@@ -36,13 +38,14 @@ public class GameController : MonoBehaviour
     {
         elapsedTime = 0f;
         bonfire.WeatherState = (int)WeatherStates.CLEAR;
-        counting = true;
-        bonfireChecker.StartTimer();
-        weatherChecker.StartTimer();
+        counting = false;
+        StartGame();
     }
 
     void Update()
     {
+        if (!isPlaying)
+            return;
         if (counting)
             elapsedTime += Time.deltaTime;
         else return;
@@ -96,5 +99,27 @@ public class GameController : MonoBehaviour
     public void SpawnNPC()
     {
         npcs.Add(new NPC());
+    }
+
+    public void StartGame()
+    {
+        isPlaying = true;
+        counting = true;
+        bonfireChecker.StartTimer();
+        weatherChecker.StartTimer();
+    }
+    public void PauseGame()
+    {
+        isPlaying = false;
+        counting = false;
+        bonfireChecker.PauseTimer();
+        weatherChecker.PauseTimer();
+    }
+    public void ContinueGame()
+    {
+        isPlaying = true;
+        counting = true;
+        bonfireChecker.ResumeTimer();
+        weatherChecker.ResumeTimer();
     }
 }
