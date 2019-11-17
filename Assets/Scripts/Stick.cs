@@ -14,6 +14,11 @@ public class Stick : MonoBehaviour
         power = Power;
         stickType = StickType;
     }
+    public Stick(Stick otherStick)
+    {
+        power = otherStick.power;
+        stickType = otherStick.stickType;
+    }
 
     void Start()
     {

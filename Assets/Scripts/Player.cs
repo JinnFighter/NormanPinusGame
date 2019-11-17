@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Dictionary<int, int> sticks;
-    public Dictionary<int, int> Sticks { get; set; }
+    private List<Stick> sticks;
+    public List<Stick> Sticks { get; set; }
     
     void Awake()
     {
-        sticks = new Dictionary<int, int>();
+        sticks = new List<Stick>();
     }
     void Start()
     {
-        sticks[(int)StickTypes.LITTLE] = 0;
+        
     }
 
     void Update()
@@ -65,17 +65,18 @@ public class Player : MonoBehaviour
 
     void PickUpStick(Stick stick)
     {
-        sticks[(int)stick.StickType] += 1;
+        Stick pickedUp = new Stick(stick);
+        sticks.Add(pickedUp);
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log("GameObject1 collided with " + col.name);
-        if (col.gameObject.GetComponent<Stick>() != null)
+        if (col.gameObject.GetComponent<Stick>() != null && sticks.Count < 3)
         {
-            Debug.Log("Player has: " + sticks[(int)StickTypes.LITTLE] + " little sticks");
+            Debug.Log("Player has: " + sticks.Count + " little sticks");
             PickUpStick(col.gameObject.GetComponent<Stick>());
-            Debug.Log("Player now has: " + sticks[(int)StickTypes.LITTLE] + " little sticks");
+            Debug.Log("Player now has: " + sticks.Count + " little sticks");
             Destroy(col.gameObject);
         }
         if(col.gameObject.GetComponent<NPC>() != null)
@@ -92,13 +93,13 @@ public class Player : MonoBehaviour
         {
             Bonfire bonfire = col.gameObject.GetComponent<Bonfire>();
             Debug.Log("Bonfire has " + bonfire.CurrentPower);
-            Debug.Log("Player has: " + sticks[(int)StickTypes.LITTLE] + " little sticks");
-            if(sticks[(int)StickTypes.LITTLE] > 0)
+            Debug.Log("Player has: " + sticks.Count + " little sticks");
+            if(sticks.Count > 0)
             {
                 bonfire.AddPower(10f);
-                sticks[(int)StickTypes.LITTLE] -= 1;
+                sticks.RemoveAt(0);
                 Debug.Log("Bonfire has " + bonfire.CurrentPower + " now");
-                Debug.Log("Player now has: " + sticks[(int)StickTypes.LITTLE] + " little sticks");
+                Debug.Log("Player now has: " + sticks.Count + " little sticks");
             }
             else
             {
